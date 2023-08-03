@@ -39,13 +39,14 @@ export function auth(req: NextRequest) {
   console.log("[User IP] ", getIP(req));
   console.log("[Time] ", new Date().toLocaleString());
 
-  if (serverConfig.needCode && !serverConfig.codes.has(hashedCode) && !token) {
-    return {
-      error: true,
-      msg: !accessCode ? "empty access code" : "wrong access code",
-      code: hashedCode,
-    };
-  }
+  // if (serverConfig.needCode && !serverConfig.codes.has(hashedCode) && !token) {
+  //   return {
+  //     error: true,
+  //     msg: !accessCode ? "empty access code" : "wrong access code",
+  //     code: hashedCode,
+  //   };
+  // }
+  // comment out the above code to allow free users to use the app with gpt-3 model
 
   // if user does not provide an api key, inject system api key
   if (!token) {

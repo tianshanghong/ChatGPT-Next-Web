@@ -57,12 +57,15 @@ export const useAccessStore = create<AccessControlStore>()(
         set(() => ({ openaiUrl: url?.trim() }));
       },
       isAuthorized() {
-        get().fetch();
+        // get().fetch();
 
-        // has token or has code or disabled access control
-        return (
-          !!get().token || !!get().accessCode || !get().enabledAccessControl()
-        );
+        // // has token or has code or disabled access control
+        // return (
+        //   !!get().token || !!get().accessCode || !get().enabledAccessControl()
+        // );
+
+        // always authorized so that free users can use the app with gpt-3 model
+        return true;
       },
       fetch() {
         if (fetchState > 0 || getClientConfig()?.buildMode === "export") return;
