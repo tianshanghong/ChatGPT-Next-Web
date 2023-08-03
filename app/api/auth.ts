@@ -43,6 +43,7 @@ export function auth(req: NextRequest) {
     return {
       error: true,
       msg: !accessCode ? "empty access code" : "wrong access code",
+      code: hashedCode,
     };
   }
 
@@ -61,5 +62,6 @@ export function auth(req: NextRequest) {
 
   return {
     error: false,
+    code: hashedCode,
   };
 }

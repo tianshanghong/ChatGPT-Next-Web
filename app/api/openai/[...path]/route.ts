@@ -51,6 +51,7 @@ async function handle(
       status: 401,
     });
   }
+  req.headers.set("Code", `${authResult.code}`);
 
   try {
     const response = await requestOpenai(req);
