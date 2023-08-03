@@ -351,6 +351,10 @@ const cn = {
     Topic: "主题",
     Time: "时间",
   },
+  Logo: {
+    Title: "Greatwall GPT",
+    SubTitle: "GPT-4模型现已上线",
+  },
 };
 
 type DeepPartial<T> = T extends object

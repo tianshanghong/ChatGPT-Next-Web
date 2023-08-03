@@ -356,6 +356,10 @@ const en: LocaleType = {
     Code: "Detected access code from url, confirm to apply? ",
     Settings: "Detected settings from url, confirm to apply?",
   },
+  Logo: {
+    Title: "Greatwall GPT",
+    SubTitle: "GPT-4 Model is now available",
+  },
 };
 
 export default en;
